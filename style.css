@@ -80,10 +80,6 @@ body {
   color: #ffffff;
   cursor: pointer;
 }
-.submit-page .ratings .number:focus {
-  background-color: #969fad;
-  color: #ffffff;
-}
 .submit-page .submit-btn {
   height: 45px;
   border-radius: 25px;
