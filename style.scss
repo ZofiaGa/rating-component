@@ -1,0 +1,528 @@
+// COMMON VARIABLES
+
+$fontStyle: "Overpass", sans-serif; // Overpass Font
+$windowBackgroundColor: #131518; // very dark blue
+$rectangleBackgroundColor: #232a34d5; // black (gradient) - a bit adjusted
+$h1FontColor: #ffffff; // pure white
+$pFontColor: #969fad; // medium grey
+
+
+// SUBMIT PAGE SPECIFIC VARIABLES
+
+$iconBackgroundColor: #262e38; // dark blue
+$rateNumBackgroundColor: #262e38; // dark blue
+$rateNumColor: #969fad; // medium grey
+$hoverRatingNumBackgroundColor: #fc7614; // orange
+$hoverRatingNumColor: #ffffff; // pure white
+$selectedNumBackgroundColor: #969fad; // medium grey
+$selectedNumColor: #ffffff; // pure white
+$submitBtnBackgroundColor: #fc7614; // orange
+$submitBtnTextColor: #ffffff; // pure white
+$hoverSubmitBtnBackgroundColor: #ffffff; // pure white
+$hoverSubmitBtnTextColor: #fc7614; // orange
+
+// THANK YOU PAGE SPECFIC VARIABLES
+
+$selectedNumColorThankYouPage: #fc7614; // orange
+$selectedNumBackgroundColorThankYouPage: #262e38; // dark blue
+
+* {
+  //   border: solid red;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $fontStyle;
+  background-color: $windowBackgroundColor;
+}
+
+.container {
+  width: 327px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5%;
+  background-color: $rectangleBackgroundColor;
+
+  h1 {
+    font-size: 24px;
+    color: $h1FontColor;
+  }
+
+  p {
+    color: $pFontColor;
+    line-height: 24px;
+  }
+}
+
+.submit-page {
+  width: 279px;
+  height: 304px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  //   display: none;
+
+  .icon-container {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $iconBackgroundColor;
+
+    #icon-star {
+      width: 13.96px;
+      height: 13.33px;
+      border-radius: 50%;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    align-self: center;
+  }
+
+  .ratings {
+    width: 281px;
+    height: 42px;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+
+    .number {
+      width: 42px;
+      height: 42px;
+      align-self: center;
+      border-radius: 50%;
+      border: none;
+      font-weight: 700;
+      background-color: $rateNumBackgroundColor;
+      color: $rateNumColor;
+
+      &:hover {
+        background-color: $hoverRatingNumBackgroundColor;
+        color: $hoverRatingNumColor;
+        cursor: pointer;
+      }
+
+      &:focus {
+        background-color: $selectedNumBackgroundColor;
+        color: $selectedNumColor;
+      }
+    }
+  }
+
+  .submit-btn {
+    height: 45px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    background-color: $submitBtnBackgroundColor;
+    color: $submitBtnTextColor;
+    letter-spacing: 2px;
+
+    &:hover {
+      background-color: $hoverSubmitBtnBackgroundColor;
+      color: $hoverSubmitBtnTextColor;
+      cursor: pointer;
+    }
+  }
+}
+
+.thank-you-page {
+  width: 279px;
+  height: 289px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img {
+    height: 95px;
+    width: 144px;
+    align-self: center;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+
+    p {
+      width: 168px;
+      height: 32px;
+      text-align: center;
+      line-height: 32px;
+      border-radius: 25px;
+      background-color: $selectedNumBackgroundColorThankYouPage;
+      color: $selectedNumColorThankYouPage;
+    }
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 412px;
+    height: 416px;
+
+    h1 {
+      color: $h1FontColor;
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .submit-page {
+    width: 340px;
+    height: 352px;
+
+    .icon-container {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 10px;
+
+      #icon-star {
+        width: 16.75px;
+        height: 16px;
+      }
+    }
+
+    h1 {
+      margin-bottom: -10px;
+    }
+
+    .ratings {
+      width: 341px;
+      height: 51px;
+      margin-bottom: 10px;
+
+      .number {
+        width: 51px;
+        height: 51px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .thank-you-page {
+    width: 340px;
+    height: 325px;
+
+    img {
+      width: 162px;
+      height: 108px;
+    }
+
+    div {
+      p {
+        width: 193px;
+      }
+    }
+
+    h1 {
+      margin: 0px 0 -25px 0;
+    }
+  }
+}
+
+// $fontStyle: 'Overpass', sans-serif; // Overpass Font
+// $backgroundColor: #131518; // very dark blue
+// $rectangleBackgroundColor: #181d24; // adjusted black (gradient)
+// $iconBackgroundColor: #262E38; // dark blue
+// $h1FontColor: #FFFFFF; // pure white
+// $pFontColor: #969FAD; // medium grey
+// $rateNumColor: #969FAD; // medium grey
+// $rateNumBackgroundColor:  #262E38; // dark blue
+// $rateNumberTextColor: #FFFFFF; // pure white
+// $submitBtnBackgroundColor: #FC7614; // orange
+// $submitBtnTextColor:  #FFFFFF; // pure white
+// $selectedNumColor:  #969FAD; // medium grey
+
+// $hoverOverSumbmitBtnBackgroundColor:  #FFFFFF; // pure white
+// $hoverOverSumbmitBtnColor:  #FC7614; // orange
+// $selectedNumBackgroundColor:  #262E38; // dark blue
+// $thankYouSelectedNumColor:  #FC7614; // orange
+
+// $hoverOverRatingColor: #FC7614; // orange
+// $hoverOverSubmitBtnColor: #FFFFFF; // white
+
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
+
+// aside {
+//     height: 100vh;
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// body {
+//     background-color: $backgroundColor;
+//     font-family: $fontStyle;
+// }
+
+// .container {
+
+//     .hidden {
+//         display: none;
+//     }
+
+//     background-color: $rectangleBackgroundColor;
+//     // width: 327px;
+//     height: 360px;
+//     border-radius: 5%;
+//     display: flex;
+
+//     h1 {
+//         color: $h1FontColor;
+//         margin-left: 24px;
+//         margin-bottom: 24px;
+//     }
+
+//     p {
+//         color: $pFontColor;
+//         font-size: 14px;
+//         line-height: 22px;
+//         width: 279px;
+//         height: 66px;
+//         margin-left: 24px;
+//         margin-bottom: 24px;
+//     }
+// }
+
+// .submit-page {
+
+//     display: flex;
+//     flex-direction: column;
+
+//     .icon-container {
+//         display: inline-block;
+//         min-width: 40px;
+//         min-height: 40px;
+//         max-width: 40px;
+//         max-height: 40px;
+//         line-height: 40px;
+//         background-color: $iconBackgroundColor;
+//         border-radius: 50%;
+//         text-align: center;
+//         margin: 24px 0 17px 24px;
+
+//         #icon-star {
+//             width: 13.96px;
+//             height: 13.33px;
+//             background-color: $iconBackgroundColor;
+//         }
+
+//     }
+
+//     .ratings {
+
+//         width: 281px;
+//         height: 42px;
+//         display: flex;
+//         justify-content: space-between;
+//         margin: 0 22px 24px 24px;
+
+//         .number {
+
+//             min-width: 42px;
+//             min-height: 42px;
+//             line-height: 42px;
+//             background-color: $rateNumBackgroundColor;
+//             border-radius: 50%;
+//             text-align: center;
+//             border: none;
+//             color: $pFontColor;
+//             font-weight: 700;
+
+//             &:focus {
+//                 background-color: $selectedNumColor;
+//                 color: white;
+//             }
+//         }
+//     }
+
+//     // .submit-btn-container {
+//         // width: 279px;
+//         // height: 45px;
+//         // background-color: $submitBtnBackgroundColor;
+//         // display: inline-block;
+//         // border-radius: 25px;
+//         // display: flex;
+//         // justify-content: center;
+//         // margin-left: 24px;
+
+//         .submit-btn {
+//             width: 279px;
+//             height: 45px;
+//             background-color: $submitBtnBackgroundColor;
+//             border: none;
+//             border-radius: 25px;
+//             text-align: center;
+//             font-size: 14px;
+//             letter-spacing: 1.87px;
+//
+//             color: $submitBtnTextColor;
+//             text-transform: uppercase;
+//             font-weight: 700;
+//             padding: auto;
+//             align-self: center;
+//         }
+//     // }
+
+// }
+
+// .thank-you-page {
+
+//     display: flex;
+//     flex-direction: column;
+//     text-align: center;
+
+//     img {
+//         height: 95px;
+//         width: 144px;
+//         margin-top: 34px;
+//         margin-bottom: 24px;
+//         // align-self: center;
+//     }
+
+//     div {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+
+//         .selected-num{
+//             width: 168px;
+//             height: 32px;
+//             line-height: 32px;
+//             color: $thankYouSelectedNumColor;
+//             background-color: $selectedNumBackgroundColor;
+//             border-radius: 20px;
+
+//         }
+//     }
+
+//     img, h1{
+//         align-self: center;
+//     }
+
+//     h1 {
+//         margin-bottom: 26px;
+//     }
+
+//     p {
+//         margin-right: 24px;
+//     }
+
+// }
+
+// @media (min-width: 376px) {
+
+//     .container {
+
+//         height: 416px;
+//     }
+
+//     .submit-page {
+
+//         .icon-container {
+//             margin: 32px 0 17px 32px;
+//             min-width: 48px;
+//             min-height: 48px;
+//             line-height: 55px;
+
+//             #icon-star {
+//                 width: 16.75px;
+//                 height: 16px;
+//                 background-color: $iconBackgroundColor;
+//                 }
+//         }
+
+//         h1 {
+//             margin: 19px 0 19px 32px;
+//         }
+
+//         p {
+//             margin-left: 32px;
+//             margin-right: 40px;
+//             width: 315px;
+
+//         }
+
+//         .ratings {
+
+//             width: 341px;
+//             height: 51px;
+//             display: flex;
+//             justify-content: space-between;
+//             margin: 0 39px 32px 32px;
+
+//             .number {
+//                 display: inline-block;
+//                 min-width: 51px;
+//                 min-height: 51px;
+//                 line-height: 51px;
+//                 border-radius: 50%;
+//                 font-size: 15px;
+
+//                 &:hover {
+//                     background-color: $hoverOverRatingColor;
+//                     color: $rateNumberTextColor;
+//                     cursor: pointer;
+
+//                 }
+
+//                 &:focus {
+//                     background-color: $selectedNumColor;
+//                     color: white;
+//                 }
+//             }
+//         }
+
+//         .submit-btn {
+//             width: 341px;
+//             font-size: 15px;
+//             letter-spacing: 4px;
+//             margin-bottom: 32px;
+//             font-weight: 700;
+
+//             &:hover {
+//                 background-color: $hoverOverSumbmitBtnBackgroundColor;
+//                 color: $hoverOverSumbmitBtnColor;
+//                 cursor: pointer;
+
+//             }
+//         }
+
+//     }
+// }
