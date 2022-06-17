@@ -7,10 +7,6 @@ const thankYouPage = document.querySelector(".thank-you-page");
 const selectedNum = document.querySelector(".selected-num");
 
 for (let i = 0; i < numberToSelect.length; i++) {
-  numberToSelect[i].addEventListener("onmouseover",  (e) => {
-    e.target.style.backgroundColor = "#fc7614"; // orange
-    e.target.style.color = "#ffffff";
-  });
 
   numberToSelect[i].addEventListener("click",  () => {
     selectedNum.textContent =
